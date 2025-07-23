@@ -1,4 +1,13 @@
 import React, { useState } from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import WhatWeDo from "./components/WhatWeDo";
+import WhyMaptiva from "./components/WhyMaptiva";
+import Soluciones from "./components/Soluciones";
+import Proyectos from "./components/Proyectos";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -50,180 +59,24 @@ const App = () => {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
-      {/* Header */}
-      <header className={`sticky top-0 z-50 ${darkMode ? "bg-gray-800" : "bg-white"} shadow-md`}>
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold">maptiva</div>
-          <nav className="space-x-6 hidden md:flex">
-            <a href="#inicio" className="hover:text-blue-500">Inicio</a>
-            <a href="#servicios" className="hover:text-blue-500">Servicios</a>
-            <a href="#proyectos" className="hover:text-blue-500">Proyectos</a>
-            <a href="#nosotros" className="hover:text-blue-500">Nosotros</a>
-            <a href="#contacto" className="hover:text-blue-500">Contacto</a>
-          </nav>
-          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-            {darkMode ? (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
-              </svg>
-            ) : (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-              </svg>
-            )}
-          </button>
-        </div>
-      </header>
+    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? "dark bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      {/* Hero Section */}
-      <section id="inicio" className={`py-20 ${darkMode ? "bg-gray-900" : "bg-gradient-to-r from-blue-50 via-white to-blue-50"}`}>
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Donde los mapas y datos son cómplices.</h1>
-            <p className="text-lg mb-6">Soluciones geoespaciales innovadoras para desafíos urbanos y territoriales.</p>
-            <div className="flex space-x-4">
-              <a href="#servicios" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Descubre Soluciones</a>
-              <a href="#contacto" className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition">Contáctanos</a>
-            </div>
-          </div>
-          <div className="md:w-1/2">
-            <img src="https://picsum.photos/seed/maptiva-hero/600/400 " alt="Map data visualization" className="rounded-lg shadow-lg w-full" />
-          </div>
-        </div>
-      </section>
+      <Hero darkMode={darkMode} />
 
-      {/* What We Do */}
-      <section className={`py-16 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">¿Qué Hacemos?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {services.map((service, index) => (
-              <div key={index} className={`p-6 rounded-lg shadow-md transform hover:scale-105 transition ${darkMode ? "bg-gray-700" : "bg-gray-50"}`}>
-                <div className="text-blue-500 mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeDo services={services} darkMode={darkMode} />
 
-      {/* Why Maptiva */}
-      <section className={`py-16 ${darkMode ? "bg-gray-900" : "bg-blue-50"}`}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Por qué Elegir Maptiva</h2>
-          <div className="max-w-3xl mx-auto">
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="mr-2 text-blue-500">✓</span>
-                <span><strong>Enfoque personalizado:</strong> Adaptamos nuestras soluciones a tus necesidades específicas.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-blue-500">✓</span>
-                <span><strong>Tecnología moderna:</strong> Usamos herramientas actuales y escalables como React, Leaflet y Firebase.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-blue-500">✓</span>
-                <span><strong>Experiencia en GIS:</strong> Años de experiencia combinando tecnología y análisis espacial.</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-2 text-blue-500">✓</span>
-                <span><strong>Compromiso con resultados:</strong> Trabajamos junto a ti para asegurar el éxito de tu proyecto.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <WhyMaptiva darkMode={darkMode} />
 
-      {/* Services Section */}
-      <section id="servicios" className={`py-16 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestras Soluciones Geoespaciales</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {services.map((service, index) => (
-              <div key={index} className={`p-6 rounded-lg shadow-md ${darkMode ? "bg-gray-700" : "bg-gray-50"}`}>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p>{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Soluciones services={services} darkMode={darkMode} />
 
-      {/* Projects Section */}
-      <section id="proyectos" className={`py-16 ${darkMode ? "bg-gray-900" : "bg-blue-50"}`}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Proyectos Destacados</h2>
-                    <div className="grid grid-cols-1 gap-10">
-                {projects.map((project, index) => (
-            <div key={index} className={`p-6 rounded-lg shadow-lg ${darkMode ? "bg-gray-800" : "bg-white"}`}>
-              <img src={project.image} alt={project.title} className="w-full h-64 object-cover rounded mb-4" />
-              <h3 className="text-2xl font-bold mb-2">{project.title}</h3> {/* Corregimos el cierre de la etiqueta */}
-              <p>{project.description}</p>
-              <h4 className="font-semibold mb-2">Características clave:</h4>
-              <ul className="list-disc pl-6 mb-4 space-y-1">
-                {project.features.map((feat, i) => (
-                  <li key={i}>{feat}</li>
-                ))}
-              </ul>
-              <h4 className="font-semibold mb-2">Tecnologías utilizadas:</h4>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, i) => (
-                  <span key={i} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">{tech}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-          </div>
-        </div>
-      </section>
+      <Proyectos projects={projects} darkMode={darkMode} />
 
-      {/* About Section */}
-      <section id="nosotros" className={`py-16 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Conoce a Maptiva</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="mb-4">Somos una empresa dedicada al desarrollo de soluciones geoespaciales innovadoras, ayudando a municipalidades, empresas logísticas, agrícolas y ambientales a tomar mejores decisiones a través de tecnologías modernas.</p>
-            <p className="mb-4">Nuestra misión es convertir datos complejos en herramientas simples y poderosas para optimizar la gestión territorial y urbana.</p>
-            <p className="mb-4">Trabajamos con un enfoque colaborativo, cercano y orientado a resultados, priorizando siempre la calidad y la sostenibilidad de las soluciones.</p>
-            <div className="mt-6 flex justify-center">
-              <img src="https://picsum.photos/seed/maptiva-team/400/300 " alt="Equipo de Maptiva" className="rounded-lg shadow-md" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <About darkMode={darkMode} />
 
-      {/* Contact Section */}
-      <section id="contacto" className={`py-16 ${darkMode ? "bg-gray-900" : "bg-blue-50"}`}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Hablemos de Tu Proyecto</h2>
-          <div className="max-w-3xl mx-auto">
-            <form className="space-y-4">
-              <input type="text" placeholder="Nombre" className={`w-full p-3 rounded border ${darkMode ? "bg-gray-700 border-gray-600" : "bg-white border-gray-300"}`} required />
-              <input type="email" placeholder="Email" className={`w-full p-3 rounded border ${darkMode ? "bg-gray-700 border-gray-600" : "bg-white border-gray-300"}`} required />
-              <input type="text" placeholder="Asunto" className={`w-full p-3 rounded border ${darkMode ? "bg-gray-700 border-gray-600" : "bg-white border-gray-300"}`} required />
-              <textarea rows="5" placeholder="Mensaje" className={`w-full p-3 rounded border ${darkMode ? "bg-gray-700 border-gray-600" : "bg-white border-gray-300"}`} required></textarea>
-              <button type="submit" className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Enviar Consulta</button>
-            </form>
-            <div className="mt-8 text-center">
-              <p>Email: contacto@maptiva.com.ar</p>
-              <p>LinkedIn: /in/maptiva</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Contact darkMode={darkMode} />
 
-      {/* Footer */}
-      <footer className={`py-8 ${darkMode ? "bg-gray-800" : "bg-gray-100"}`}>
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} maptiva. Todos los derechos reservados.</p>
-          <div className="mt-4 space-x-4">
-            <a href="#" className="text-blue-500 hover:underline">Política de Privacidad</a>
-            <a href="#" className="text-blue-500 hover:underline">Términos de Uso</a>
-          </div>
-        </div>
-      </footer>
+      <Footer darkMode={darkMode} />
     </div>
   );
 };

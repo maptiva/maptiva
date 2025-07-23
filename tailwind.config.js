@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'maptiva-green-light': '#A2B29F',
+        'maptiva-green-medium': '#6B8E23',
+        'maptiva-green-dark': '#4B5320',
+        'maptiva-green-accent': '#8FBC8F',
+      },
+    },
   },
   plugins: [],
   darkMode: 'class',
