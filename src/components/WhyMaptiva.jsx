@@ -33,7 +33,7 @@ const pilares = [
 
 const WhyMaptiva = ({ darkMode }) => {
   return (
-    <section id="porque-maptiva" className={`py-16 ${darkMode ? "bg-gray-900" : "bg-blue-50"}`}>
+    <section id="porque-maptiva" className={`py-16 ${darkMode ? "bg-gray-900" : "bg-gradient-to-r from-maptiva-green-light to-white"}`}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Nuestra Filosofía</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

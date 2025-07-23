@@ -1,11 +1,14 @@
 import React from 'react';
 import maptivaLogo from '/public/maptiva-logo.png';
+import maptivaLogoWhite from '/public/maptiva-logo-white.png';
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   return (
     <header className={`sticky top-0 z-50 ${darkMode ? "bg-gray-800" : "bg-white"} shadow-md`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <img src={maptivaLogo} alt="Maptiva Logo" className="h-10" />
+        <a href="https://maptiva.github.io/maptiva/">
+          <img src={darkMode ? maptivaLogoWhite : maptivaLogo} alt="Maptiva Logo" className="h-10" />
+        </a>
         <nav className="space-x-6 hidden md:flex">
           <a href="#inicio" className="hover:text-maptiva-green-medium">Inicio</a>
           <a href="#servicios" className="hover:text-maptiva-green-medium">Servicios</a>
