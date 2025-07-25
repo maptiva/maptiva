@@ -46,7 +46,7 @@ const projectsData = [
 
 const Proyectos = ({ darkMode }) => {
   const videoOptions = {
-    height: '360',
+    height: '320',
     width: '100%',
     playerVars: {
       autoplay: 0,
@@ -63,13 +63,13 @@ const Proyectos = ({ darkMode }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                 {project.videoId ? (
                   <>
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded" />
-                    <div className="w-full">
+                    <img src={project.image} alt={project.title} className="w-full h-80 object-cover rounded" />
+                    <div className="w-full h-80">
                       <YouTube videoId={project.videoId} opts={videoOptions} className="w-full rounded" />
                     </div>
                   </>
                 ) : (
-                  <div className="relative w-full h-full md:col-span-2">
+                  <div className="relative w-full h-80 md:col-span-2">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded" />
                     <a
                       href={project.liveLink}
