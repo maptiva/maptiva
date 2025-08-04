@@ -1,5 +1,6 @@
 import React from 'react';
 import nosotrosImg from '../../public/nosotros.png';
+import alejandroImg from '../../public/alejandro.jpg';
 
 const About = ({ darkMode }) => {
   return (
@@ -12,6 +13,12 @@ const About = ({ darkMode }) => {
           <p className="mb-4">Trabajamos con una mirada colaborativa y humana, con cariño y responsabilidad, convirtiendo la información relevante en herramientas que fortalecen decisiones y contribuyen al bienestar de las comunidades.</p>
           <div className="mt-12 flex justify-center">
             <img src={nosotrosImg} alt="Equipo de Maptiva trabajando en colaboración" className="rounded-lg shadow-md" />
+          </div>
+
+          <div className="mt-16 text-center">
+            <img src={alejandroImg} alt="Alejandro Saposnik, Fundador y Director de Maptiva" className="w-40 h-40 mx-auto rounded-full shadow-lg" />
+            <h3 className="text-2xl font-bold mt-6">Alejandro Saposnik</h3>
+            <p className="text-lg text-gray-600 dark:text-gray-400">Fundador y Director</p>
           </div>
         </div>
       </div>
