@@ -1,33 +1,40 @@
 import React from 'react';
 
 // Iconos SVG como componentes de React para un mejor control y rendimiento
-const IconAnalisis = () => (
-  <svg className="w-12 h-12 text-maptiva-green-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 3l6-3m0 0l-6-3m6 3v10"></path></svg>
+const IconGoogle = () => (
+  <svg className="w-12 h-12 text-maptiva-green-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
 );
 
-const IconHerramientas = () => (
-  <svg className="w-12 h-12 text-maptiva-green-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+const IconTienda = () => (
+  <svg className="w-12 h-12 text-maptiva-green-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
 );
 
-const IconEstrategia = () => (
-  <svg className="w-12 h-12 text-maptiva-green-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+const IconGIS = () => (
+  <svg className="w-12 h-12 text-maptiva-green-medium" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
 );
 
 const services = [
   {
-    icon: <IconAnalisis />,
-    title: 'Análisis Geoespacial',
-    description: 'Convertimos datos complejos en mapas y dashboards interactivos que revelan patrones y facilitan la toma de decisiones.',
+    icon: <IconGoogle />,
+    title: 'Presencia en Google',
+    description: 'Tu negocio en el mapa. Optimizamos tu Perfil de Negocio para que aparezcas primero en las búsquedas locales.',
   },
   {
-    icon: <IconHerramientas />,
-    title: 'Herramientas a Medida',
-    description: 'Creamos aplicaciones y sistemas de información geográfica (SIG) personalizados para tus necesidades específicas de gestión y operación.',
+    icon: <IconTienda />,
+    title: 'Catálogo Digital - Clicando',
+    description: (
+      <>
+        Tu showroom digital para vender por WhatsApp. Muestra tus productos, recibe pedidos automáticamente y cierra ventas sin complicaciones.{' '}
+        <a href="https://clicando.com.ar" target="_blank" rel="noopener noreferrer" className="text-maptiva-green-dark dark:text-maptiva-green-light font-semibold hover:underline">
+          Ir al sitio oficial →
+        </a>
+      </>
+    ),
   },
   {
-    icon: <IconEstrategia />,
-    title: 'Estrategia y Acompañamiento',
-    description: 'Te asesoramos en cómo usar la tecnología geoespacial para optimizar procesos, mejorar servicios y generar un impacto positivo en tu comunidad.',
+    icon: <IconGIS />,
+    title: 'Soluciones Geoespaciales (GIS)',
+    description: 'Inteligencia territorial y mapas interactivos para optimizar logística y gestión urbana.',
   },
 ];
 

@@ -2,31 +2,34 @@ import React from 'react';
 import YouTube from 'react-youtube';
 import projectImage from '/005.png';
 import farmaciasScreenshot from '/006.png';
+import clicandoScreenshot from '/clicando-landing.png';
 
 const projectsData = [
   {
-    image: projectImage,
-    videoId: 'Uurl5Neznf0',
-    title: 'Sistema de Gestión de Reportes Urbanos',
-    description: 'Presentamos un prototipo funcional y avanzado de un sistema digital integral, diseñado para que organismos públicos y privados optimicen la gestión de incidencias y el mantenimiento de infraestructuras. La plataforma se estructura en dos módulos clave: una Aplicación Móvil Progresiva (PWA) para reportes en terreno y un Tablero de Gestión Web centralizado para administradores.',
+    image: clicandoScreenshot,
+    liveLink: 'https://clicando.com.ar',
+    title: 'Clicando: Catálogo Digital con WhatsApp',
+    description: 'Desarrollo propio de Maptiva. Una plataforma SaaS que permite a emprendedores mostrar sus productos y vender directamente por WhatsApp, sin complicaciones técnicas.',
     features: [
-      'Aplicación Móvil Progresiva (PWA) para reporte geolocalizado y detallado de incidentes.',
-      'Funcionamiento offline con almacenamiento local y sincronización automática.',
-      'Tablero de Gestión Web con visualización integral en mapa interactivo y tabla de reportes.',
-      'Filtros avanzados, búsqueda y gestión del ciclo de vida de los reportes.',
-      'Panel de estadísticas y monitoreo con indicadores clave.',
+      'Catálogo digital autogestionable con carrito de compras.',
+      'Pedidos automáticos enviados por WhatsApp al comerciante.',
+      'Sin pasarela de pago - el comerciante cierra la venta manualmente.',
+      'Panel de administración intuitivo para gestionar productos y clientes.',
+      'Galería de productos con imágenes, descripciones y precios.',
+      'Modelo de suscripción sin comisiones por venta.',
     ],
     technologies: [
-      'Frontend: HTML5, CSS3 (Tailwind CSS), JavaScript (PWA)',
-      'Backend & DB: Firebase (Firestore, Firebase Storage)',
-      'Mapas: Leaflet.js, Leaflet.MarkerCluster',
+      'Frontend: React, Tailwind CSS, React Router',
+      'Backend & DB: Supabase (PostgreSQL, Storage, Auth)',
+      'Integración: WhatsApp Business',
+      'Deployment: Vercel',
     ],
   },
   {
     image: farmaciasScreenshot,
     liveLink: 'https://maptiva.github.io/farmacias-chajari/',
-    title: 'Portal de Farmacias de Turno - Chajarí',
-    description: 'Presentamos una herramienta digital de servicio a la comunidad, diseñada para que los vecinos de Chajarí encuentren de forma rápida y sencilla la farmacia de turno. Su característica principal es la actualización automática de los turnos (tanto principal como de refuerzo), garantizando información precisa y siempre al día, especialmente en momentos de urgencia.',
+    title: 'Farmacias de Turno Chajarí',
+    description: 'Web App Progresiva (PWA) de servicio comunitario con geolocalización en tiempo real.',
     features: [
       'Actualización automática y en tiempo real de la farmacia de turno (24hs) y de refuerzo (horario cortado).',
       'Mapa interactivo con la geolocalización de todas las farmacias y marcadores diferenciados por tipo de turno.',
@@ -40,6 +43,24 @@ const projectsData = [
       'Frontend: HTML5, CSS3 (Tailwind CSS), JavaScript (PWA)',
       'Backend & DB: Firebase (Firestore)',
       'Mapas: Leaflet.js',
+    ],
+  },
+  {
+    image: projectImage,
+    videoId: 'Uurl5Neznf0',
+    title: 'Gestor de Reportes Urbanos',
+    description: 'Sistema integral de gestión de incidentes territoriales para municipios.',
+    features: [
+      'Aplicación Móvil Progresiva (PWA) para reporte geolocalizado y detallado de incidentes.',
+      'Funcionamiento offline con almacenamiento local y sincronización automática.',
+      'Tablero de Gestión Web con visualización integral en mapa interactivo y tabla de reportes.',
+      'Filtros avanzados, búsqueda y gestión del ciclo de vida de los reportes.',
+      'Panel de estadísticas y monitoreo con indicadores clave.',
+    ],
+    technologies: [
+      'Frontend: HTML5, CSS3 (Tailwind CSS), JavaScript (PWA)',
+      'Backend & DB: Firebase (Firestore, Firebase Storage)',
+      'Mapas: Leaflet.js, Leaflet.MarkerCluster',
     ],
   },
 ];

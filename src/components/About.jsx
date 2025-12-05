@@ -1,6 +1,6 @@
 import React from 'react';
-import nosotrosImg from '../../public/nosotros.png';
-import alejandroImg from '../../public/alejandro.jpg';
+import nosotrosImg from '/nosotros.png';
+import alejandroImg from '/alejandro.jpg';
 
 const About = ({ darkMode }) => {
   return (

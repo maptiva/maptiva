@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import maptivaLogo from '/public/maptiva-logo.png';
-import maptivaLogoWhite from '/public/maptiva-logo-white.png';
+import maptivaLogo from '/maptiva-logo.png';
+import maptivaLogoWhite from '/maptiva-logo-white.png';
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
